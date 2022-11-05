@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "K/VDLTuVJ7RCqHv1ff9LW5WMasAwcUd39Q2Xb6CTjHc=",
+  "Source": "BoardingTracker.WebApi",
+  "BasePath": "_content/BoardingTracker.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

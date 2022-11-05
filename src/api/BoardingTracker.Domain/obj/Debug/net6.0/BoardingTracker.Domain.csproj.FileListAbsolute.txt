@@ -1,0 +1,14 @@
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\bin\Debug\net6.0\BoardingTracker.Domain.deps.json
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\bin\Debug\net6.0\BoardingTracker.Domain.runtimeconfig.json
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\bin\Debug\net6.0\BoardingTracker.Domain.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\bin\Debug\net6.0\BoardingTracker.Domain.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.csproj.AssemblyReference.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.AssemblyInfoInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.AssemblyInfo.cs
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.csproj.CoreCompileInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\refint\BoardingTracker.Domain.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\BoardingTracker.Domain.genruntimeconfig.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Domain\obj\Debug\net6.0\ref\BoardingTracker.Domain.dll

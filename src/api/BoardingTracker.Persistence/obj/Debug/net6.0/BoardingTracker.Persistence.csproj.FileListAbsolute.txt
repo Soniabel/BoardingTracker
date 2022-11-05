@@ -1,0 +1,15 @@
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\bin\Debug\net6.0\BoardingTracker.Persistence.deps.json
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\bin\Debug\net6.0\BoardingTracker.Persistence.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\bin\Debug\net6.0\BoardingTracker.Persistence.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.csproj.AssemblyReference.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.AssemblyInfoInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.AssemblyInfo.cs
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.csproj.CoreCompileInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\refint\BoardingTracker.Persistence.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\ref\BoardingTracker.Persistence.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\bin\Debug\net6.0\BoardingTracker.Domain.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\bin\Debug\net6.0\BoardingTracker.Domain.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Persistence\obj\Debug\net6.0\BoardingTracker.Persistence.csproj.CopyComplete

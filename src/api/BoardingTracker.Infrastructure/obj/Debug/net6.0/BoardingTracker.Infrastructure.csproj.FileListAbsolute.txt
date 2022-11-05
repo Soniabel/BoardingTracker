@@ -1,0 +1,12 @@
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.deps.json
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.csproj.AssemblyReference.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.AssemblyInfoInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.AssemblyInfo.cs
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.csproj.CoreCompileInputs.cache
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\refint\BoardingTracker.Infrastructure.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\ref\BoardingTracker.Infrastructure.dll
