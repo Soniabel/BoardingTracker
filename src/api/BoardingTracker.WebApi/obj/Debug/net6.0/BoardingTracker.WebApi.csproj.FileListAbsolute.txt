@@ -68,3 +68,13 @@ E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTrack
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\BoardingTracker.Infrastructure.pdb
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\BoardingTracker.Persistence.pdb
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\BoardingTracker.Domain.pdb
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\AutoMapper.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\FluentValidation.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\MediatR.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\MediatR.Contracts.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll

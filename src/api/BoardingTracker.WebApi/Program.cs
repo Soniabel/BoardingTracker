@@ -1,8 +1,18 @@
+using BoardingTracker.Application.Candidates.Queries.GetAllCandidates;
+using BoardingTracker.Application.Infrastructure.Mapper;
 using BoardingTracker.WebApi.Infrastructure.Data.Extensions;
+using FluentValidation;
+using MediatR;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 await builder.Services.AddDatabase(builder.Configuration);
+
+builder.Services.AddMediatR(typeof(GetCandidates).GetTypeInfo().Assembly);
+//builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
+builder.Services.AddAutoMapper(typeof(BoardingTrackerMappingProfile));
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 
 builder.Services.AddControllers();
