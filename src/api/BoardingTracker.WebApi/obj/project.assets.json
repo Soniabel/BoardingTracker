@@ -850,7 +850,7 @@
           "BoardingTracker.Domain": "1.0.0",
           "BoardingTracker.Infrastructure": "1.0.0",
           "BoardingTracker.Persistence": "1.0.0",
-          "FluentValidation": "11.2.2",
+          "FluentValidation": "11.2.0",
           "MediatR": "11.0.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"

@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sUkntfNgD9741lMn9dqh6FtH3q5UJXBiGcfduRsl8/i5no2UTFqftTEXfxA69vGY5KVkF+WolqUbhMURM4YAzA==",
+  "dgSpecHash": "SxbmVwvLfuJTBMeHOKHD8yDmWGLTkd7hyEjvHX50fep/iENxi9KMo9LB1BkHMqCKEi5YT1Z8Hq8fYrpjzJkXIQ==",
   "success": true,
   "projectFilePath": "E:\\University\\4course-1semester\\CourseWork\\BoardingTracker\\src\\api\\BoardingTracker.Application\\BoardingTracker.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sofiia\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
-    "C:\\Users\\Sofiia\\.nuget\\packages\\fluentvalidation\\11.2.2\\fluentvalidation.11.2.2.nupkg.sha512",
+    "C:\\Users\\Sofiia\\.nuget\\packages\\fluentvalidation\\11.2.0\\fluentvalidation.11.2.0.nupkg.sha512",
     "C:\\Users\\Sofiia\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
     "C:\\Users\\Sofiia\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Sofiia\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
