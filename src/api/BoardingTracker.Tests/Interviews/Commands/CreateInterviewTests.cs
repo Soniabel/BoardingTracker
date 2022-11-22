@@ -7,9 +7,12 @@ using BoardingTracker.Application.SeniorityLevels.Models;
 using BoardingTracker.Application.Vacancies.Models;
 using BoardingTracker.Application.VacancyStatuses.Models;
 using BoardingTracker.Application.VacancyTypes.Models;
+using BoardingTracker.Infrastructure.SendGrid.Interfaces;
 using BoardingTracker.Tests.Helpers;
 using FluentAssertions;
+using Moq;
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -24,6 +27,8 @@ namespace BoardingTracker.Tests.Interviews.Commands
 
             protected readonly CreateInterviewHandler _interviewHandler;
 
+            private readonly Mock<IEmailSender> _emailSender = new();
+
             protected CreateInterviewTest()
             {
                 _interviewRequest = new CreateInterviewRequest()
@@ -37,7 +42,11 @@ namespace BoardingTracker.Tests.Interviews.Commands
                     InterviewTypeId = 1
                 };
 
-                _interviewHandler = new CreateInterviewHandler(_dbContext, _mapper);
+                var emails = new List<string>();
+
+                _emailSender.Setup(x => x.SendEmailAsync(emails));
+
+                _interviewHandler = new CreateInterviewHandler(_dbContext, _mapper, _emailSender.Object);
             }
         }
 

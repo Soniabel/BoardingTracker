@@ -3,6 +3,7 @@ using BoardingTracker.Application.Infrastructure;
 using BoardingTracker.Application.Infrastructure.Mapper;
 using BoardingTracker.WebApi.Infrastructure.Data.Extensions;
 using BoardingTracker.WebApi.Infrastructure.ExceptionHandling.Middleware;
+using BoardingTracker.WebApi.Infrastructure.SendGrid.Extensions;
 using FluentValidation;
 using MediatR;
 using System.Reflection;
@@ -21,6 +22,8 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddCustomSendGrid(builder.Configuration);
 
 var app = builder.Build();
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();

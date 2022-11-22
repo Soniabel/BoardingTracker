@@ -78,3 +78,6 @@ E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTrack
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\SendGrid.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\SendGrid.Extensions.DependencyInjection.dll
+E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.WebApi\bin\Debug\net6.0\StarkbankEcdsa.dll

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BoardingTracker.Application.Interviews.Models;
 using BoardingTracker.Domain.Entities;
+using BoardingTracker.Infrastructure.SendGrid.Interfaces;
 using BoardingTracker.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -11,13 +12,13 @@ namespace BoardingTracker.Application.Interviews.Commands.CreateInterview
     {
         private readonly DBBoardingTrackerContext _context;
         private readonly IMapper _mapper;
-        //private readonly IEmailSender _emailSender;
+        private readonly IEmailSender _emailSender;
 
-        public CreateInterviewHandler(DBBoardingTrackerContext context, IMapper mapper) //IEmailSender emailSender)
+        public CreateInterviewHandler(DBBoardingTrackerContext context, IMapper mapper, IEmailSender emailSender)
         {
             _context = context;
             _mapper = mapper;
-            //_emailSender = emailSender;
+            _emailSender = emailSender;
         }
 
         public async Task<InterviewModel> Handle(CreateInterviewRequest request, CancellationToken cancellationToken)
@@ -35,7 +36,7 @@ namespace BoardingTracker.Application.Interviews.Commands.CreateInterview
 
             var emails = new List<string>() { createdInterview.Recruiter.User.Email, createdInterview.Candidate.User.Email };
 
-            //await _emailSender.SendEmailAsync(emails);
+            await _emailSender.SendEmailAsync(emails);
 
             return _mapper.Map<InterviewModel>(createdInterview);
         }
