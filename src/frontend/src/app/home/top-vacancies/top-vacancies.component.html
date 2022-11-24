@@ -1,0 +1,18 @@
+<h4 class="vacancy-title">TOP VACANCIES</h4>
+<div class="vacancy-cards">
+<mat-card class="vacancy-card" *ngFor="let vacancy of vacancies" appCardShadow>
+    <mat-card-content>
+        <div class="vacancy-info">
+            <div>
+                <span>{{ vacancy.title }}</span>
+            </div>
+            <div>
+                <span>{{ vacancy.seniorityLevel }}</span>
+            </div>
+            <div>
+                <span>{{ vacancy.type }}</span>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+</div>

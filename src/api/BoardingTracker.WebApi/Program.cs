@@ -25,6 +25,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddCustomSendGrid(builder.Configuration);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.WithOrigins(new[] { "http://localhost:4200", "http://localhost:9876", "http://localhost:9877" })
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+    });
+});
+
 var app = builder.Build();
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 
@@ -35,6 +46,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 

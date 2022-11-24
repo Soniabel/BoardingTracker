@@ -9,8 +9,7 @@
       "BoardingTracker.Persistence/1.0.0": {
         "dependencies": {
           "BoardingTracker.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10",
-          "SendGrid": "9.28.1"
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
         },
         "runtime": {
           "BoardingTracker.Persistence.dll": {}
