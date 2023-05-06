@@ -10,3 +10,15 @@ E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTrack
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\refint\BoardingTracker.Infrastructure.dll
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.pdb
 E:\University\4course-1semester\CourseWork\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\ref\BoardingTracker.Infrastructure.dll
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.deps.json
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.dll
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\bin\Debug\net6.0\BoardingTracker.Infrastructure.pdb
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.AssemblyInfo.cs
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.dll
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\refint\BoardingTracker.Infrastructure.dll
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\BoardingTracker.Infrastructure.pdb
+C:\Users\Sofia\Desktop\Соня\4course-2semester\Diploma\BoardingTracker\src\api\BoardingTracker.Infrastructure\obj\Debug\net6.0\ref\BoardingTracker.Infrastructure.dll
