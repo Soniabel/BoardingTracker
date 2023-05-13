@@ -1,0 +1,44 @@
+<div class="interview-item">
+  <mat-card-title-group class="title-group">
+    <mat-card-title class="title">
+      <div class="name">
+        {{ interview.title }}
+      </div>
+    </mat-card-title>
+    <mat-card-subtitle class="subtitle">
+      <div class="time">
+        {{ interview.startTime | date: 'M/d/yy, h:mm a' }} - {{ interview.endTime | date: 'M/d/yy, h:mm a' }}
+      </div>
+      <div class="type">
+        {{ interview.interviewType.name }}
+      </div>
+    </mat-card-subtitle>
+  </mat-card-title-group>
+  <mat-card-content class="content">
+    <div class="recruiter">
+      Recruiter - {{ interview.recruiter.firstName }} {{interview.recruiter.lastName}}
+    </div>
+    <div class="candidate">
+      Candidate - {{ interview.candidate.firstName }} {{ interview.candidate.lastName }}
+    </div>
+    <div class="vacancy-wrapper">
+      <div class="vacancy-name">
+        {{ interview.vacancy.title }}
+      </div>
+      <div class="vacancy-level-salary">
+        {{ interview.vacancy.seniorityLevel.name }} - {{ interview.vacancy.salary }}$
+      </div>
+      <div class="vacancy-type">
+        Type - {{ interview.vacancy.vacancyType.name }}
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button mat-button class="button" mat-dialog-close>
+        Close
+      </button>
+      <button mat-button class="button">
+        Start
+      </button>
+    </div>
+  </mat-card-content>
+</div>

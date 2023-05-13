@@ -1,0 +1,26 @@
+<h4 class="vacancy-title">VACANCIES</h4>
+<div class="vacancy-cards">
+  <div class="add-icon-container">
+    <mat-icon class="add-icon" [routerLink]="['create']"> add </mat-icon>
+  </div>
+  <mat-card class="vacancy-card" *ngFor="let vacancy of vacancies$ | async" appCardShadow (click)="openVacancyItem(vacancy)" >
+    <mat-card-title-group class="title-group">
+      <mat-card-title class="title">
+        <div class="name">
+          {{ vacancy.title }}
+        </div>
+        <div class="salary">
+          {{ vacancy.salary }}$
+        </div>
+      </mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content class="content">
+      <div class="type">
+        {{ vacancy.vacancyType.name }}
+      </div>
+      <div class="level">
+        {{ vacancy.seniorityLevel.name }}
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

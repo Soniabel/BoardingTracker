@@ -1,0 +1,38 @@
+<div class="candidate-item">
+    <mat-card-title-group class="title-group">
+      <mat-card-title class="title">
+        <div class="first-name">
+            {{ candidate.firstName }}
+        </div>
+        <div class="last-name">
+            {{ candidate.lastName }}
+        </div>
+      </mat-card-title>
+      <mat-card-subtitle class="subtitle">
+        <div class="phone-number">
+            {{ candidate.phoneNumber }}
+        </div>
+        <div class="email">
+            {{ candidate.email }}
+        </div>
+      </mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content class="content">
+      <div class="biography">
+         {{ candidate.biography }}
+      </div>
+      <div class="skills-wrapper">
+        <div class="skills" *ngFor="let skill of skills$ | async">
+          {{ skill.name }}
+        </div>
+      </div>
+      <div class="button-wrapper">
+          <button mat-button class="button" mat-dialog-close>
+            Close
+          </button>
+          <button mat-button class="button">
+            <a class="resume-url" href="{{ candidate.resumeUrl }}" target="-blank">Resume</a>
+          </button>
+      </div>
+    </mat-card-content>
+  </div>

@@ -1,0 +1,78 @@
+<h4 class="interview-title">ADD-INTERVIEWS</h4>
+<div class="add-interview-container">
+  <div class="content">
+    <form [formGroup]="addInterviewForm" class="add-form-info">
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">Title :</h3>
+        </div>
+        <mat-form-field class="add-form-input" appearance="outline">
+          <input matInput type="text" formControlName="title"/>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">StartTime :</h3>
+        </div>
+        <mat-form-field>
+          <input matInput [ngxMatDatetimePicker]="picker" placeholder="Choose a date & time" formControlName="startTime">
+          <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+          <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">EndTime :</h3>
+        </div>
+        <mat-form-field>
+          <input matInput [ngxMatDatetimePicker]="secondPicker" placeholder="Choose a date & time" formControlName="endTime">
+          <mat-datepicker-toggle matSuffix [for]="$any(secondPicker)"></mat-datepicker-toggle>
+          <ngx-mat-datetime-picker #secondPicker></ngx-mat-datetime-picker>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">Vacancies :</h3>
+        </div>
+        <mat-form-field class="add-form-input" appearance="outline">
+          <mat-select formControlName="vacancyId">
+            <mat-option *ngFor="let vacancy of vacancies$ | async" [value]="vacancy.id"> {{ vacancy.title }} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">Recruiters :</h3>
+        </div>
+        <mat-form-field class="add-form-input" appearance="outline">
+          <mat-select formControlName="recruiterId">
+            <mat-option *ngFor="let recruiter of recruiters$ | async" [value]="recruiter.id"> {{ recruiter.firstName }} {{ recruiter.lastName }} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">Candidates :</h3>
+        </div>
+        <mat-form-field class="add-form-input" appearance="outline">
+          <mat-select formControlName="candidateId">
+            <mat-option *ngFor="let candidate of candidates$ | async" [value]="candidate.id">{{ candidate.firstName }} {{ candidate.lastName }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="content-inputs">
+        <div class="content-names">
+          <h3 class="name">Interview Type :</h3>
+        </div>
+        <mat-form-field class="add-form-input" appearance="outline">
+          <mat-select formControlName="interviewTypeId">
+            <mat-option *ngFor="let interviewType of interviewTypes$ | async" [value]="interviewType.id">{{ interviewType.name }} </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="button-wrapper" (click)="addInterview();">
+        <button class="add-button" mat-button>Add Interview</button>
+      </div>
+    </form>
+  </div>
+</div>
