@@ -23,7 +23,7 @@ namespace BoardingTracker.Application.Recruiters.Queries.GetAllRecruiters
             public async Task<RecruitersList> Handle(GetRecruiters request, CancellationToken cancellationToken)
             {
                 var recruiters = await _context.Recruiters
-                    .Join(_context.Users,
+                    .Join(_context.Userss,
                     recruiter => recruiter.UserId,
                     user => user.Id,
                     (recruiter, user) => new RecruiterModel

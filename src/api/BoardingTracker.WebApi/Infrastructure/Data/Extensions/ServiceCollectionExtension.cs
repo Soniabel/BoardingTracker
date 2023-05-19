@@ -1,5 +1,4 @@
 ﻿using BoardingTracker.Persistence;
-using BoardingTracker.Persistence.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace BoardingTracker.WebApi.Infrastructure.Data.Extensions
@@ -14,7 +13,7 @@ namespace BoardingTracker.WebApi.Infrastructure.Data.Extensions
                 options.UseSqlServer(connectionString, builder => builder.MigrationsAssembly(typeof(DBBoardingTrackerContext).Assembly.FullName)));
 
             var context = services.BuildServiceProvider().GetService<DBBoardingTrackerContext>();
-            await context.SeedDatabase();
+            //await context.SeedDatabase();
 
             return services;
         }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BoardingTracker.Application.Candidates.Commands.DeleteCandidate
 {
-    public class DeleteCandidateHandler : IRequestHandler<DeleteCandidateRequest, int>
+    public class DeleteCandidateHandler : IRequestHandler<DeleteCandidateRequest, Guid>
     {
         private readonly DBBoardingTrackerContext _context;
 
@@ -15,7 +15,7 @@ namespace BoardingTracker.Application.Candidates.Commands.DeleteCandidate
             _context = context;
         }
 
-        public async Task<int> Handle(DeleteCandidateRequest request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(DeleteCandidateRequest request, CancellationToken cancellationToken)
         {
             var candidate = await _context.Candidates.FirstOrDefaultAsync(x => x.Id == request.Id);
 

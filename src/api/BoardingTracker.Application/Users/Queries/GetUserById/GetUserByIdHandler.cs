@@ -21,7 +21,7 @@ namespace BoardingTracker.Application.Users.Queries.GetUserById
 
         public async Task<UserModel> Handle(GetUserByIdRequest request, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.AsNoTracking()
+            var user = await _context.Userss.AsNoTracking()
                 .FirstOrDefaultAsync(x => x.Id == request.Id);
 
             if (user is null)

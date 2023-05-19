@@ -22,7 +22,7 @@ namespace BoardingTracker.Application.Users.Queries.GetAllUsers
 
             public async Task<UsersList> Handle(GetUsers request, CancellationToken cancellationToken)
             {
-                var users = await _context.Users.AsNoTracking()
+                var users = await _context.Userss.AsNoTracking()
                     .Select(user => _mapper.Map<UserModel>(user))
                     .ToListAsync(cancellationToken);
 

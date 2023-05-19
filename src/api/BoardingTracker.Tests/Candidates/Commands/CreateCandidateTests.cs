@@ -2,6 +2,7 @@
 using BoardingTracker.Application.Candidates.Models;
 using BoardingTracker.Tests.Helpers;
 using FluentAssertions;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -25,7 +26,7 @@ namespace BoardingTracker.Tests.Candidates.Commands
                     PhoneNumber = "TestPhone",
                     Biography = "TestBiography",
                     ResumeUrl = "TestResumeUrl",
-                    UserId = 1
+                    UserId = Guid.NewGuid()
                 };
 
                 _candidateHandler = new CreateCandidateHandler(_dbContext, _mapper);
@@ -39,13 +40,13 @@ namespace BoardingTracker.Tests.Candidates.Commands
             {
                 var expectedCandidate = new CandidateModel
                 {
-                    Id = 3,
+                    Id = Guid.NewGuid(),
                     FirstName = "TestName",
                     LastName = "TestName",
                     PhoneNumber = "TestPhone",
                     Biography = "TestBiography",
                     ResumeUrl = "TestResumeUrl",
-                    UserId = 1
+                    UserId = Guid.NewGuid()
                 };
                 var result = await _candidateHandler.Handle(_candidateRequest, new CancellationToken());
 

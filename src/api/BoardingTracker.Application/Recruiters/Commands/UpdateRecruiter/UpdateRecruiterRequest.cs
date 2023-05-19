@@ -5,7 +5,7 @@ namespace BoardingTracker.Application.Recruiters.Commands.UpdateRecruiter
 {
     public class UpdateRecruiterRequest : IRequest<RecruiterModel>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string FirstName { get; set; } = null!;
 
@@ -13,6 +13,6 @@ namespace BoardingTracker.Application.Recruiters.Commands.UpdateRecruiter
 
         public string? ProfileImageUrl { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
     }
 }

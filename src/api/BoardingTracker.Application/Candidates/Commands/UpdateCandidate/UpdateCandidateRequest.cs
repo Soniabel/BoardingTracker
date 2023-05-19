@@ -5,7 +5,7 @@ namespace BoardingTracker.Application.Candidates.Commands.UpdateCandidate
 {
     public class UpdateCandidateRequest : IRequest<CandidateModel>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string FirstName { get; set; } = null!;
 
@@ -17,6 +17,6 @@ namespace BoardingTracker.Application.Candidates.Commands.UpdateCandidate
 
         public string ResumeUrl { get; set; } = null!;
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
     }
 }

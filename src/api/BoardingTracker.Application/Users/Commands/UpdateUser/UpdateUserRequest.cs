@@ -5,7 +5,7 @@ namespace BoardingTracker.Application.Users.Commands.UpdateUser
 {
     public class UpdateUserRequest : IRequest<UserModel>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string Email { get; set; } = null!;
 

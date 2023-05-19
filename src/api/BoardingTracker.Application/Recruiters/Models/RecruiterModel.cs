@@ -2,7 +2,7 @@
 {
     public class RecruiterModel
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public string FirstName { get; set; } = null!;
 
@@ -10,7 +10,7 @@
 
         public string? ProfileImageUrl { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public string Email { get; set; }
     }

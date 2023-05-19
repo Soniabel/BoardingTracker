@@ -11,6 +11,6 @@ namespace BoardingTracker.Application.Recruiters.Commands.CreateRecruiter
 
         public string? ProfileImageUrl { get; set; }
 
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
     }
 }

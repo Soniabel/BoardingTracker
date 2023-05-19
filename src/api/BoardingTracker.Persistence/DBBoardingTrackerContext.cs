@@ -8,9 +8,9 @@ namespace BoardingTracker.Persistence
 {
     public partial class DBBoardingTrackerContext : DbContext
     {
-        public DBBoardingTrackerContext()
-        {
-        }
+        //public DBBoardingTrackerContext()
+        //{
+        //}
 
         public DBBoardingTrackerContext(DbContextOptions<DBBoardingTrackerContext> options)
             : base(options)
@@ -31,7 +31,7 @@ namespace BoardingTracker.Persistence
 
         public virtual DbSet<Skill> Skills { get; set; } = null!;
 
-        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<User> Userss { get; set; } = null!;
 
         public virtual DbSet<Vacancy> Vacancies { get; set; } = null!;
 
@@ -42,189 +42,195 @@ namespace BoardingTracker.Persistence
         public virtual DbSet<VacancyStatus> VacancyStatuses { get; set; } = null!;
 
         public virtual DbSet<VacancyType> VacancyTypes { get; set; } = null!;
+        public virtual DbSet<RefreshToken> RefreshTokens { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
-
-            var entityTypes = modelBuilder.Model
-            .GetEntityTypes()
-            .ToList();
-
-            var foreignKeys = entityTypes
-                .SelectMany(e => e.GetForeignKeys().Where(f => f.DeleteBehavior == DeleteBehavior.Cascade));
-            foreach (var foreignKey in foreignKeys)
-            {
-                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
-            }
         }
 
-    //    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    //    {
-    //        modelBuilder.Entity<Candidate>(entity =>
-    //        {
-    //            entity.Property(e => e.FirstName).HasMaxLength(50);
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.ApplyConfigurationsFromAssembly(GetType().Assembly);
 
-    //            entity.Property(e => e.LastName).HasMaxLength(50);
+        //    var entityTypes = modelBuilder.Model
+        //    .GetEntityTypes()
+        //    .ToList();
 
-    //            entity.Property(e => e.PhoneNumber).HasMaxLength(50);
+        //    var foreignKeys = entityTypes
+        //        .SelectMany(e => e.GetForeignKeys().Where(f => f.DeleteBehavior == DeleteBehavior.Cascade));
+        //    foreach (var foreignKey in foreignKeys)
+        //    {
+        //        foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+        //    }
+        //}
 
-    //            entity.HasOne(d => d.User)
-    //                .WithMany(p => p.Candidates)
-    //                .HasForeignKey(d => d.UserId)
-    //                .HasConstraintName("FK__Candidate__UserI__398D8EEE");
-    //        });
+        //    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //    {
+        //        modelBuilder.Entity<Candidate>(entity =>
+        //        {
+        //            entity.Property(e => e.FirstName).HasMaxLength(50);
 
-    //        modelBuilder.Entity<CandidateSkill>(entity =>
-    //        {
-    //            entity.HasNoKey();
+        //            entity.Property(e => e.LastName).HasMaxLength(50);
 
-    //            entity.HasOne(d => d.Candidate)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.CandidateId)
-    //                .HasConstraintName("FK__Candidate__Candi__3A81B327");
+        //            entity.Property(e => e.PhoneNumber).HasMaxLength(50);
 
-    //            entity.HasOne(d => d.Skill)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.SkillId)
-    //                .HasConstraintName("FK__Candidate__Skill__3B75D760");
-    //        });
+        //            entity.HasOne(d => d.User)
+        //                .WithMany(p => p.Candidates)
+        //                .HasForeignKey(d => d.UserId)
+        //                .HasConstraintName("FK__Candidate__UserI__398D8EEE");
+        //        });
 
-    //        modelBuilder.Entity<Interview>(entity =>
-    //        {
-    //            entity.Property(e => e.EndTime).HasColumnType("datetime");
+        //        modelBuilder.Entity<CandidateSkill>(entity =>
+        //        {
+        //            entity.HasNoKey();
 
-    //            entity.Property(e => e.StartTime).HasColumnType("datetime");
+        //            entity.HasOne(d => d.Candidate)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.CandidateId)
+        //                .HasConstraintName("FK__Candidate__Candi__3A81B327");
 
-    //            entity.Property(e => e.Title).HasMaxLength(50);
+        //            entity.HasOne(d => d.Skill)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.SkillId)
+        //                .HasConstraintName("FK__Candidate__Skill__3B75D760");
+        //        });
 
-    //            entity.HasOne(d => d.Candidate)
-    //                .WithMany(p => p.Interviews)
-    //                .HasForeignKey(d => d.CandidateId)
-    //                .HasConstraintName("FK__Interview__Candi__45F365D3");
+        //        modelBuilder.Entity<Interview>(entity =>
+        //        {
+        //            entity.Property(e => e.EndTime).HasColumnType("datetime");
 
-    //            entity.HasOne(d => d.InterviewType)
-    //                .WithMany(p => p.Interviews)
-    //                .HasForeignKey(d => d.InterviewTypeId)
-    //                .HasConstraintName("FK__Interview__Inter__46E78A0C");
+        //            entity.Property(e => e.StartTime).HasColumnType("datetime");
 
-    //            entity.HasOne(d => d.Recruiter)
-    //                .WithMany(p => p.Interviews)
-    //                .HasForeignKey(d => d.RecruiterId)
-    //                .HasConstraintName("FK__Interview__Recru__44FF419A");
+        //            entity.Property(e => e.Title).HasMaxLength(50);
 
-    //            entity.HasOne(d => d.Vacancy)
-    //                .WithMany(p => p.Interviews)
-    //                .HasForeignKey(d => d.VacancyId)
-    //                .HasConstraintName("FK__Interview__Vacan__440B1D61");
-    //        });
+        //            entity.HasOne(d => d.Candidate)
+        //                .WithMany(p => p.Interviews)
+        //                .HasForeignKey(d => d.CandidateId)
+        //                .HasConstraintName("FK__Interview__Candi__45F365D3");
 
-    //        modelBuilder.Entity<InterviewType>(entity =>
-    //        {
-    //            entity.Property(e => e.Name).HasMaxLength(50);
-    //        });
+        //            entity.HasOne(d => d.InterviewType)
+        //                .WithMany(p => p.Interviews)
+        //                .HasForeignKey(d => d.InterviewTypeId)
+        //                .HasConstraintName("FK__Interview__Inter__46E78A0C");
 
-    //        modelBuilder.Entity<Recruiter>(entity =>
-    //        {
-    //            entity.Property(e => e.FirstName).HasMaxLength(50);
+        //            entity.HasOne(d => d.Recruiter)
+        //                .WithMany(p => p.Interviews)
+        //                .HasForeignKey(d => d.RecruiterId)
+        //                .HasConstraintName("FK__Interview__Recru__44FF419A");
 
-    //            entity.Property(e => e.LastName).HasMaxLength(50);
+        //            entity.HasOne(d => d.Vacancy)
+        //                .WithMany(p => p.Interviews)
+        //                .HasForeignKey(d => d.VacancyId)
+        //                .HasConstraintName("FK__Interview__Vacan__440B1D61");
+        //        });
 
-    //            entity.HasOne(d => d.User)
-    //                .WithMany(p => p.Recruiters)
-    //                .HasForeignKey(d => d.UserId)
-    //                .HasConstraintName("FK__Recruiter__UserI__38996AB5");
-    //        });
+        //        modelBuilder.Entity<InterviewType>(entity =>
+        //        {
+        //            entity.Property(e => e.Name).HasMaxLength(50);
+        //        });
 
-    //        modelBuilder.Entity<SeniorityLevel>(entity =>
-    //        {
-    //            entity.Property(e => e.Name).HasMaxLength(50);
-    //        });
+        //        modelBuilder.Entity<Recruiter>(entity =>
+        //        {
+        //            entity.Property(e => e.FirstName).HasMaxLength(50);
 
-    //        modelBuilder.Entity<Skill>(entity =>
-    //        {
-    //            entity.Property(e => e.Name).HasMaxLength(50);
-    //        });
+        //            entity.Property(e => e.LastName).HasMaxLength(50);
 
-    //        modelBuilder.Entity<User>(entity =>
-    //        {
-    //            entity.Property(e => e.Email).HasMaxLength(50);
+        //            entity.HasOne(d => d.User)
+        //                .WithMany(p => p.Recruiters)
+        //                .HasForeignKey(d => d.UserId)
+        //                .HasConstraintName("FK__Recruiter__UserI__38996AB5");
+        //        });
 
-    //            entity.Property(e => e.Password).HasMaxLength(100);
+        //        modelBuilder.Entity<SeniorityLevel>(entity =>
+        //        {
+        //            entity.Property(e => e.Name).HasMaxLength(50);
+        //        });
 
-    //            entity.Property(e => e.Role).HasMaxLength(20);
-    //        });
+        //        modelBuilder.Entity<Skill>(entity =>
+        //        {
+        //            entity.Property(e => e.Name).HasMaxLength(50);
+        //        });
 
-    //        modelBuilder.Entity<Vacancy>(entity =>
-    //        {
-    //            entity.Property(e => e.Salary).HasColumnType("decimal(18, 0)");
+        //        modelBuilder.Entity<User>(entity =>
+        //        {
+        //            entity.Property(e => e.Email).HasMaxLength(50);
 
-    //            entity.Property(e => e.Title).HasMaxLength(50);
+        //            entity.Property(e => e.Password).HasMaxLength(100);
 
-    //            entity.HasOne(d => d.Recruiter)
-    //                .WithMany(p => p.Vacancies)
-    //                .HasForeignKey(d => d.RecruiterId)
-    //                .HasConstraintName("FK__Vacancies__Recru__4316F928");
+        //            entity.Property(e => e.Role).HasMaxLength(20);
+        //        });
 
-    //            entity.HasOne(d => d.SeniorityLevel)
-    //                .WithMany(p => p.Vacancies)
-    //                .HasForeignKey(d => d.SeniorityLevelId)
-    //                .HasConstraintName("FK__Vacancies__Senio__403A8C7D");
+        //        modelBuilder.Entity<Vacancy>(entity =>
+        //        {
+        //            entity.Property(e => e.Salary).HasColumnType("decimal(18, 0)");
 
-    //            entity.HasOne(d => d.VacancyStatus)
-    //                .WithMany(p => p.Vacancies)
-    //                .HasForeignKey(d => d.VacancyStatusId)
-    //                .HasConstraintName("FK__Vacancies__Vacan__4222D4EF");
+        //            entity.Property(e => e.Title).HasMaxLength(50);
 
-    //            entity.HasOne(d => d.VacancyType)
-    //                .WithMany(p => p.Vacancies)
-    //                .HasForeignKey(d => d.VacancyTypeId)
-    //                .HasConstraintName("FK__Vacancies__Vacan__412EB0B6");
-    //        });
+        //            entity.HasOne(d => d.Recruiter)
+        //                .WithMany(p => p.Vacancies)
+        //                .HasForeignKey(d => d.RecruiterId)
+        //                .HasConstraintName("FK__Vacancies__Recru__4316F928");
 
-    //        modelBuilder.Entity<VacancyCandidate>(entity =>
-    //        {
-    //            entity.HasNoKey();
+        //            entity.HasOne(d => d.SeniorityLevel)
+        //                .WithMany(p => p.Vacancies)
+        //                .HasForeignKey(d => d.SeniorityLevelId)
+        //                .HasConstraintName("FK__Vacancies__Senio__403A8C7D");
 
-    //            entity.HasOne(d => d.Candidate)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.CandidateId)
-    //                .HasConstraintName("FK__VacancyCa__Candi__3F466844");
+        //            entity.HasOne(d => d.VacancyStatus)
+        //                .WithMany(p => p.Vacancies)
+        //                .HasForeignKey(d => d.VacancyStatusId)
+        //                .HasConstraintName("FK__Vacancies__Vacan__4222D4EF");
 
-    //            entity.HasOne(d => d.Vacancy)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.VacancyId)
-    //                .HasConstraintName("FK__VacancyCa__Vacan__3E52440B");
-    //        });
+        //            entity.HasOne(d => d.VacancyType)
+        //                .WithMany(p => p.Vacancies)
+        //                .HasForeignKey(d => d.VacancyTypeId)
+        //                .HasConstraintName("FK__Vacancies__Vacan__412EB0B6");
+        //        });
 
-    //        modelBuilder.Entity<VacancySkill>(entity =>
-    //        {
-    //            entity.HasNoKey();
+        //        modelBuilder.Entity<VacancyCandidate>(entity =>
+        //        {
+        //            entity.HasNoKey();
 
-    //            entity.HasOne(d => d.Skill)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.SkillId)
-    //                .HasConstraintName("FK__VacancySk__Skill__3D5E1FD2");
+        //            entity.HasOne(d => d.Candidate)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.CandidateId)
+        //                .HasConstraintName("FK__VacancyCa__Candi__3F466844");
 
-    //            entity.HasOne(d => d.Vacancy)
-    //                .WithMany()
-    //                .HasForeignKey(d => d.VacancyId)
-    //                .HasConstraintName("FK__VacancySk__Vacan__3C69FB99");
-    //        });
+        //            entity.HasOne(d => d.Vacancy)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.VacancyId)
+        //                .HasConstraintName("FK__VacancyCa__Vacan__3E52440B");
+        //        });
 
-    //        modelBuilder.Entity<VacancyStatus>(entity =>
-    //        {
-    //            entity.Property(e => e.Name).HasMaxLength(50);
-    //        });
+        //        modelBuilder.Entity<VacancySkill>(entity =>
+        //        {
+        //            entity.HasNoKey();
 
-    //        modelBuilder.Entity<VacancyType>(entity =>
-    //        {
-    //            entity.Property(e => e.Name).HasMaxLength(50);
-    //        });
+        //            entity.HasOne(d => d.Skill)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.SkillId)
+        //                .HasConstraintName("FK__VacancySk__Skill__3D5E1FD2");
 
-    //        OnModelCreatingPartial(modelBuilder);
-    //    }
+        //            entity.HasOne(d => d.Vacancy)
+        //                .WithMany()
+        //                .HasForeignKey(d => d.VacancyId)
+        //                .HasConstraintName("FK__VacancySk__Vacan__3C69FB99");
+        //        });
 
-    //    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+        //        modelBuilder.Entity<VacancyStatus>(entity =>
+        //        {
+        //            entity.Property(e => e.Name).HasMaxLength(50);
+        //        });
+
+        //        modelBuilder.Entity<VacancyType>(entity =>
+        //        {
+        //            entity.Property(e => e.Name).HasMaxLength(50);
+        //        });
+
+        //        OnModelCreatingPartial(modelBuilder);
+        //    }
+
+        //    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

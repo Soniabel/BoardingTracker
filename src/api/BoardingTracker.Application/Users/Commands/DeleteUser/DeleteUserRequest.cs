@@ -2,8 +2,8 @@
 
 namespace BoardingTracker.Application.Users.Commands.DeleteUser
 {
-    public class DeleteUserRequest : IRequest<int>
+    public class DeleteUserRequest : IRequest<Guid>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

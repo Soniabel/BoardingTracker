@@ -2,8 +2,8 @@
 
 namespace BoardingTracker.Application.Candidates.Commands.DeleteCandidate
 {
-    public class DeleteCandidateRequest : IRequest<int>
+    public class DeleteCandidateRequest : IRequest<Guid>
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 }

@@ -27,7 +27,7 @@ namespace BoardingTracker.WebApi.Controllers
 
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CandidatesList))]
-        public async Task<IActionResult> DeleteCandidate(int id)
+        public async Task<IActionResult> DeleteCandidate(Guid id)
         {
             var result = await Mediator.Send(new DeleteCandidateRequest { Id = id });
             return Ok(result);
@@ -51,7 +51,7 @@ namespace BoardingTracker.WebApi.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CandidatesList))]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var result = await Mediator.Send(new GetCandidateByIdRequest { Id = id });
             return Ok(result);
@@ -59,7 +59,7 @@ namespace BoardingTracker.WebApi.Controllers
 
         [HttpGet("skills/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SkillList))]
-        public async Task<IActionResult> SkillListByCandidateId(int id)
+        public async Task<IActionResult> SkillListByCandidateId(Guid id)
         {
             var result = await Mediator.Send(new GetSkillsByCandidateIdRequest { Id = id });
             return Ok(result);

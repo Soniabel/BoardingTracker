@@ -14,7 +14,7 @@
         public int? SeniorityLevelId { get; set; }
         public int? VacancyTypeId { get; set; }
         public int? VacancyStatusId { get; set; }
-        public int? RecruiterId { get; set; }
+        public Guid? RecruiterId { get; set; }
 
         public virtual Recruiter? Recruiter { get; set; }
         public virtual SeniorityLevel? SeniorityLevel { get; set; }

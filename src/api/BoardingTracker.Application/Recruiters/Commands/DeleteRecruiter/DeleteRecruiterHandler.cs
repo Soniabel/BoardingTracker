@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BoardingTracker.Application.Recruiters.Commands.DeleteRecruiter
 {
-    public class DeleteRecruiterHandler : IRequestHandler<DeleteRecruiterRequest, int>
+    public class DeleteRecruiterHandler : IRequestHandler<DeleteRecruiterRequest, Guid>
     {
         private readonly DBBoardingTrackerContext _context;
 
@@ -15,7 +15,7 @@ namespace BoardingTracker.Application.Recruiters.Commands.DeleteRecruiter
             _context = context;
         }
 
-        public async Task<int> Handle(DeleteRecruiterRequest request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(DeleteRecruiterRequest request, CancellationToken cancellationToken)
         {
             var recruiter = await _context.Recruiters
                 .FirstOrDefaultAsync(x => x.Id == request.Id);

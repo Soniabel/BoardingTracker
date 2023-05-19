@@ -2,7 +2,7 @@
 {
     public partial class CandidateSkill
     {
-        public int? CandidateId { get; set; }
+        public Guid? CandidateId { get; set; }
         public int? SkillId { get; set; }
 
         public virtual Candidate? Candidate { get; set; }

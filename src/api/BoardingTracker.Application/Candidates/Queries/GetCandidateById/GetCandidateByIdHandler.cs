@@ -22,7 +22,7 @@ namespace BoardingTracker.Application.Candidates.Queries.GetCandidateById
         public async Task<CandidateModel> Handle(GetCandidateByIdRequest request, CancellationToken cancellationToken)
         {
             var candidate = await _context.Candidates.AsNoTracking()
-                   .Join(_context.Users,
+                   .Join(_context.Userss,
                     candidate => candidate.UserId,
                     user => user.Id,
                     (candidate, user) => new CandidateModel

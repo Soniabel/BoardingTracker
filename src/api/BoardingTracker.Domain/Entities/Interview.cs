@@ -7,8 +7,8 @@
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public int? VacancyId { get; set; }
-        public int? RecruiterId { get; set; }
-        public int? CandidateId { get; set; }
+        public Guid? RecruiterId { get; set; }
+        public Guid? CandidateId { get; set; }
         public int? InterviewTypeId { get; set; }
 
         public virtual Candidate? Candidate { get; set; }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BoardingTracker.Application.Users.Commands.DeleteUser
 {
-    public class DeleteUserHandler : IRequestHandler<DeleteUserRequest, int>
+    public class DeleteUserHandler : IRequestHandler<DeleteUserRequest, Guid>
     {
         private readonly DBBoardingTrackerContext _context;
 
@@ -15,16 +15,16 @@ namespace BoardingTracker.Application.Users.Commands.DeleteUser
             _context = context;
         }
 
-        public async Task<int> Handle(DeleteUserRequest request, CancellationToken cancellationToken)
+        public async Task<Guid> Handle(DeleteUserRequest request, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var user = await _context.Userss.FirstOrDefaultAsync(x => x.Id == request.Id);
 
             if (user is null)
             {
                 throw new NotFoundException(nameof(User), request.Id);
             }
 
-            _context.Users.Remove(user);
+            _context.Userss.Remove(user);
             await _context.SaveChangesAsync(cancellationToken);
 
             return request.Id;

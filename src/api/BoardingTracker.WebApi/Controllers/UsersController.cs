@@ -25,7 +25,7 @@ namespace BoardingTracker.WebApi.Controllers
 
         [HttpDelete("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsersList))]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(Guid id)
         {
             var result = await Mediator.Send(new DeleteUserRequest { Id = id });
             return Ok(result);
@@ -49,7 +49,7 @@ namespace BoardingTracker.WebApi.Controllers
 
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsersList))]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<IActionResult> GetById(Guid id)
         {
             var result = await Mediator.Send(new GetUserByIdRequest { Id = id });
             return Ok(result);

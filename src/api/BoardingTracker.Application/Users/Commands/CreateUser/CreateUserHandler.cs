@@ -21,7 +21,7 @@ namespace BoardingTracker.Application.Users.Commands.CreateUser
         {
             var user = _mapper.Map<User>(request);
 
-            _context.Users.Add(user);
+            _context.Userss.Add(user);
             await _context.SaveChangesAsync(cancellationToken);
 
             return _mapper.Map<UserModel>(user);

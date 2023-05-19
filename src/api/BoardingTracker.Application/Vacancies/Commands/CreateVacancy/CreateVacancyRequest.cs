@@ -17,6 +17,6 @@ namespace BoardingTracker.Application.Vacancies.Commands.CreateVacancy
 
         public int VacancyStatusId { get; set; }
 
-        public int RecruiterId { get; set; }
+        public Guid RecruiterId { get; set; }
     }
 }

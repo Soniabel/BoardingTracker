@@ -21,7 +21,7 @@ namespace BoardingTracker.Application.Users.Commands.UpdateUser
 
         public async Task<UserModel> Handle(UpdateUserRequest request, CancellationToken cancellationToken)
         {
-            var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == request.Id);
+            var user = await _context.Userss.FirstOrDefaultAsync(x => x.Id == request.Id);
 
             if (user is null)
             {
