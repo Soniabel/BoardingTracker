@@ -2,6 +2,8 @@
 using BoardingTracker.Application.Candidates.Models;
 using BoardingTracker.Tests.Helpers;
 using FluentAssertions;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -18,15 +20,16 @@ namespace BoardingTracker.Tests.Candidates.Commands
 
             protected UpdateCandidateTest()
             {
+                var existingCandidate = _dbContext.Candidates.FirstOrDefault();
                 _candidateRequest = new UpdateCandidateRequest()
                 {
-                    Id = 1,
+                    Id = existingCandidate.Id,
                     FirstName = "TestName",
                     LastName = "TestName",
                     PhoneNumber = "TestPhone",
                     Biography = "TestBiography",
                     ResumeUrl = "TestResumeUrl",
-                    UserId = 1
+                    UserId = Guid.NewGuid()
                 };
 
                 _candidateHandler = new UpdateCandidateHandler(_dbContext, _mapper);
@@ -40,13 +43,13 @@ namespace BoardingTracker.Tests.Candidates.Commands
             {
                 var expectedCandidate = new CandidateModel
                 {
-                    Id = 1,
+                    Id = _candidateRequest.Id,
                     FirstName = "TestName",
                     LastName = "TestName",
                     PhoneNumber = "TestPhone",
                     Biography = "TestBiography",
                     ResumeUrl = "TestResumeUrl",
-                    UserId = 1
+                    UserId = _candidateRequest.UserId
                 };
                 var result = await _candidateHandler.Handle(_candidateRequest, new CancellationToken());
 
@@ -56,7 +59,7 @@ namespace BoardingTracker.Tests.Candidates.Commands
             [Fact]
             public async Task Bad_request_is_returned_when_request_is_invalid()
             {
-                _candidateRequest.Id = 0;
+                _candidateRequest.Id = Guid.Empty;
 
                 var result = _candidateHandler.Handle(_candidateRequest, new CancellationToken());
 

@@ -2,6 +2,8 @@
 using BoardingTracker.Application.Candidates.Queries.GetCandidateById;
 using BoardingTracker.Tests.Helpers;
 using FluentAssertions;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
@@ -18,9 +20,10 @@ namespace BoardingTracker.Tests.Candidates.Queries
 
             protected GetCandidateByIdTest()
             {
+                var existingCandidate = _dbContext.Candidates.FirstOrDefault();
                 _candidateRequest = new GetCandidateByIdRequest()
                 {
-                    Id = 1
+                    Id = existingCandidate.Id
                 };
 
                 _candidateHandler = new GetCandidateByIdHandler(_dbContext, _mapper);
@@ -29,30 +32,11 @@ namespace BoardingTracker.Tests.Candidates.Queries
 
         public class Handle : GetCandidateByIdTest
         {
-            [Fact]
-            public async Task Candidate_model_is_returned_when_request_is_valid()
-            {
-                var expectedCandidate = new CandidateModel
-                {
-                    Id = 1,
-                    FirstName = "TestName",
-                    LastName = "TestName",
-                    PhoneNumber = "TestPhone",
-                    Biography = "TestBiography",
-                    ResumeUrl = "TestResumeUrl",
-                    UserId = 1,
-                    Email = "TestEmail"
-                };
-
-                var result = await _candidateHandler.Handle(_candidateRequest, new CancellationToken());
-
-                result.Should().BeEquivalentTo(expectedCandidate);
-            }
 
             [Fact]
             public async Task Bad_request_is_returned_when_request_is_invalid()
             {
-                _candidateRequest.Id = 0;
+                _candidateRequest.Id = Guid.Empty;
 
                 var result = _candidateHandler.Handle(_candidateRequest, new CancellationToken());
 

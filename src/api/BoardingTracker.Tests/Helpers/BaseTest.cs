@@ -88,14 +88,14 @@ namespace BoardingTracker.Tests.Helpers
                         FirstName = "TestFirstName",
                         LastName = "TestLastName",
                         ProfileImageUrl = "TestImage",
-                        UserId = 1
+                        UserId = Guid.NewGuid()
                     },
                     new Recruiter
                     {
                         FirstName = "TestFirstName",
                         LastName = "TestLastName",
                         ProfileImageUrl = "TestImage",
-                        UserId = 1
+                        UserId = Guid.NewGuid()
                     }
                 };
 
@@ -121,7 +121,7 @@ namespace BoardingTracker.Tests.Helpers
                 context.SaveChanges();
             }
 
-            if (!context.Users.Any())
+            if (!context.Userss.Any())
             {
                 var users = new List<User>()
                 {
@@ -173,7 +173,7 @@ namespace BoardingTracker.Tests.Helpers
                         SeniorityLevelId = 1,
                         VacancyTypeId = 1,
                         VacancyStatusId = 1,
-                        RecruiterId = 1
+                        RecruiterId = Guid.NewGuid()
                     },
                     new Vacancy
                     {
@@ -183,7 +183,7 @@ namespace BoardingTracker.Tests.Helpers
                         SeniorityLevelId = 1,
                         VacancyTypeId = 1,
                         VacancyStatusId = 1,
-                        RecruiterId = 1
+                        RecruiterId = Guid.NewGuid()
                     }
                 };
 
@@ -202,7 +202,7 @@ namespace BoardingTracker.Tests.Helpers
                        PhoneNumber = "TestPhone",
                        Biography = "TestBiography",
                        ResumeUrl = "TestResumeUrl",
-                       UserId = 1
+                       UserId = Guid.NewGuid()
                     },
                     new Candidate
                     {
@@ -211,7 +211,7 @@ namespace BoardingTracker.Tests.Helpers
                        PhoneNumber = "TestPhone",
                        Biography = "TestBiography",
                        ResumeUrl = "TestResumeUrl",
-                       UserId = 1
+                       UserId = Guid.NewGuid()
                     }
                 };
 
@@ -229,8 +229,8 @@ namespace BoardingTracker.Tests.Helpers
                         StartTime = new DateTime(2022, 12, 12),
                         EndTime = new DateTime(2022, 12, 12),
                         VacancyId = 1,
-                        RecruiterId = 1,
-                        CandidateId = 1,
+                        RecruiterId = Guid.NewGuid(),
+                        CandidateId = Guid.NewGuid(),
                         InterviewTypeId = 1
                     }
                 };
@@ -261,7 +261,7 @@ namespace BoardingTracker.Tests.Helpers
                     new CandidateSkill
                     {
                         SkillId = 1,
-                        CandidateId = 1
+                        CandidateId = Guid.NewGuid()
                     }
                 };
 

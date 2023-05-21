@@ -11,7 +11,7 @@ export class TopRecruitersComponent {
   [
     {
       profileImage: "../../assets/2nd.png",
-      name: "Karina Ivanova",
+      name: "Tatiana Melnik",
     },
     {
       profileImage: "../../assets/1st.png",

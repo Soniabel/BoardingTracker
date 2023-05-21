@@ -10,17 +10,17 @@ export class TopVacanciesComponent {
   vacancies = 
   [
     {
-      title: "Vacancy 1",
+      title: ".NET Developer",
       seniorityLevel: "Junior",
       type: "Full Time"
     },
     {
-      title: "Vacancy 2",
+      title: "Tester",
       seniorityLevel: "Middle",
       type: "Full Time"
     },
     {
-      title: "Vacancy 3",
+      title: "Java Developer",
       seniorityLevel: "Junior",
       type: "Part Time"
     }

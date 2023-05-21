@@ -1,6 +1,7 @@
 ﻿using BoardingTracker.Application.Candidates.Commands.UpdateCandidate;
 using BoardingTracker.Application.Candidates.Validators;
 using FluentAssertions;
+using System;
 using Xunit;
 
 namespace BoardingTracker.Tests.Candidates.Validators
@@ -13,13 +14,13 @@ namespace BoardingTracker.Tests.Candidates.Validators
             var validator = new UpdateCandidateValidator();
             var result = validator.Validate(new UpdateCandidateRequest
             {
-                Id = 1,
+                Id = Guid.NewGuid(),
                 FirstName = "TestName",
                 LastName = "TestName",
                 PhoneNumber = "TestPhone",
                 Biography = "TestBiography",
                 ResumeUrl = "TestResumeUrl",
-                UserId = 1
+                UserId = Guid.NewGuid()
             });
 
             result.IsValid.Should().BeTrue();
@@ -31,13 +32,13 @@ namespace BoardingTracker.Tests.Candidates.Validators
             var validator = new UpdateCandidateValidator();
             var result = validator.Validate(new UpdateCandidateRequest
             {
-                Id = 0,
+                Id = Guid.Empty,
                 FirstName = null,
                 LastName = null,
                 PhoneNumber = null,
                 Biography = null,
                 ResumeUrl = null,
-                UserId = 0
+                UserId = Guid.Empty
             });
 
             result.IsValid.Should().BeFalse();

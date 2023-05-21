@@ -1,6 +1,7 @@
 ﻿using BoardingTracker.Application.Candidates.Commands.DeleteCandidate;
 using BoardingTracker.Application.Candidates.Validators;
 using FluentAssertions;
+using System;
 using Xunit;
 
 namespace BoardingTracker.Tests.Candidates.Validators
@@ -13,7 +14,7 @@ namespace BoardingTracker.Tests.Candidates.Validators
             var validator = new DeleteCandidateValidator();
             var result = validator.Validate(new DeleteCandidateRequest
             {
-                Id = 1
+                Id = Guid.NewGuid()
             });
 
             result.IsValid.Should().BeTrue();
@@ -25,7 +26,7 @@ namespace BoardingTracker.Tests.Candidates.Validators
             var validator = new DeleteCandidateValidator();
             var result = validator.Validate(new DeleteCandidateRequest
             {
-                Id = 0
+                Id = Guid.Empty
             });
 
             result.IsValid.Should().BeFalse();

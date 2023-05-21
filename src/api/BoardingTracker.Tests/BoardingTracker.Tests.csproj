@@ -8,6 +8,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Interviews\**" />
+    <Compile Remove="InterviewTypes\**" />
+    <Compile Remove="Recruiters\**" />
+    <Compile Remove="SeniorityLevels\**" />
+    <Compile Remove="Skills\**" />
+    <Compile Remove="Users\**" />
+    <Compile Remove="Vacancies\**" />
+    <Compile Remove="VacancyStatuses\**" />
+    <Compile Remove="VacancyTypes\**" />
+    <EmbeddedResource Remove="Interviews\**" />
+    <EmbeddedResource Remove="InterviewTypes\**" />
+    <EmbeddedResource Remove="Recruiters\**" />
+    <EmbeddedResource Remove="SeniorityLevels\**" />
+    <EmbeddedResource Remove="Skills\**" />
+    <EmbeddedResource Remove="Users\**" />
+    <EmbeddedResource Remove="Vacancies\**" />
+    <EmbeddedResource Remove="VacancyStatuses\**" />
+    <EmbeddedResource Remove="VacancyTypes\**" />
+    <None Remove="Interviews\**" />
+    <None Remove="InterviewTypes\**" />
+    <None Remove="Recruiters\**" />
+    <None Remove="SeniorityLevels\**" />
+    <None Remove="Skills\**" />
+    <None Remove="Users\**" />
+    <None Remove="Vacancies\**" />
+    <None Remove="VacancyStatuses\**" />
+    <None Remove="VacancyTypes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.5" />

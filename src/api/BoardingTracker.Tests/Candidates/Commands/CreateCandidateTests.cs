@@ -38,19 +38,29 @@ namespace BoardingTracker.Tests.Candidates.Commands
             [Fact]
             public async Task Candidate_model_is_returned_when_request_is_valid()
             {
-                var expectedCandidate = new CandidateModel
-                {
-                    Id = Guid.NewGuid(),
-                    FirstName = "TestName",
-                    LastName = "TestName",
-                    PhoneNumber = "TestPhone",
-                    Biography = "TestBiography",
-                    ResumeUrl = "TestResumeUrl",
-                    UserId = Guid.NewGuid()
-                };
+
                 var result = await _candidateHandler.Handle(_candidateRequest, new CancellationToken());
 
-                result.Should().BeEquivalentTo(expectedCandidate);
+                result.Should().NotBeNull();
+                result.FirstName.Should().Be(_candidateRequest.FirstName);
+                result.LastName.Should().Be(_candidateRequest.LastName);
+                result.PhoneNumber.Should().Be(_candidateRequest.PhoneNumber);
+                result.Biography.Should().Be(_candidateRequest.Biography);
+                result.ResumeUrl.Should().Be(_candidateRequest.ResumeUrl);
+                result.UserId.Should().Be(_candidateRequest.UserId);
+                //var expectedCandidate = new CandidateModel
+                //{
+                //    Id = _candidateHandler.,
+                //    FirstName = "TestName",
+                //    LastName = "TestName",
+                //    PhoneNumber = "TestPhone",
+                //    Biography = "TestBiography",
+                //    ResumeUrl = "TestResumeUrl",
+                //    UserId = _candidateRequest.UserId
+                //};
+                //var result = await _candidateHandler.Handle(_candidateRequest, new CancellationToken());
+
+                //result.Should().BeEquivalentTo(expectedCandidate);
             }
 
             [Fact]
