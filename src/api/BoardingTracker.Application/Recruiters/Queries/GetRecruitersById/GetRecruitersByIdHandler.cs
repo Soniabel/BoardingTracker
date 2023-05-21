@@ -22,11 +22,11 @@ namespace BoardingTracker.Application.Recruiters.Queries.GetRecruitersById
         public async Task<RecruiterModel> Handle(GetRecruiterByIdRequest request, CancellationToken cancellationToken)
         {
             var recruiter = await _context.Recruiters.AsNoTracking()
-                   .FirstOrDefaultAsync(x => x.Id == request.Id);
+                   .FirstOrDefaultAsync(x => x.UserId == request.UserId);
 
             if (recruiter is null)
             {
-                throw new NotFoundException(nameof(Recruiter), request.Id);
+                throw new NotFoundException(nameof(Recruiter), request.UserId);
             }
 
             return _mapper.Map<RecruiterModel>(recruiter);

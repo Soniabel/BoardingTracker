@@ -7,7 +7,7 @@ namespace BoardingTracker.Application.Recruiters.Validators
     {
         public GetRecruiterByIdValidator()
         {
-            RuleFor(recruiter => recruiter.Id).NotNull().NotEmpty();
+            RuleFor(recruiter => recruiter.UserId).NotNull().NotEmpty();
         }
     }
 }

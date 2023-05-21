@@ -5,6 +5,6 @@ namespace BoardingTracker.Application.Candidates.Queries.GetCandidateSkill
 {
     public class GetSkillsByCandidateIdRequest : IRequest<SkillList>
     {
-        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
     }
 }

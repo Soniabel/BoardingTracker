@@ -21,14 +21,14 @@ namespace BoardingTracker.Application.Candidates.Queries.GetCandidateSkill
 
         public async Task<SkillList> Handle(GetSkillsByCandidateIdRequest request, CancellationToken cancellationToken)
         {
-            var candidate = await _context.Candidates.AsNoTracking().FirstOrDefaultAsync(x => x.Id == request.Id);
+            var candidate = await _context.Candidates.AsNoTracking().FirstOrDefaultAsync(x => x.UserId == request.UserId);
 
             if (candidate is null)
             {
-                throw new NotFoundException(nameof(Candidate), request.Id);
+                throw new NotFoundException(nameof(Candidate), request.UserId);
             }
 
-            var skills = await _context.CandidateSkills.Where(candidateSkills => candidateSkills.CandidateId == request.Id)
+            var skills = await _context.CandidateSkills.Where(candidateSkills => candidateSkills.CandidateId == request.UserId)
                 .Join(_context.Skills,
                 candidateSkills => candidateSkills.SkillId,
                 skill => skill.Id,

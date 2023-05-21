@@ -49,19 +49,19 @@ namespace BoardingTracker.WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("candidatebyuserid")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CandidatesList))]
-        public async Task<IActionResult> GetById(Guid id)
+        public async Task<IActionResult> GetById(string userId)
         {
-            var result = await Mediator.Send(new GetCandidateByIdRequest { Id = id });
+            var result = await Mediator.Send(new GetCandidateByIdRequest { UserId = Guid.Parse(userId) });
             return Ok(result);
         }
 
         [HttpGet("skills/{id}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SkillList))]
-        public async Task<IActionResult> SkillListByCandidateId(Guid id)
+        public async Task<IActionResult> SkillListByCandidateId(string userId)
         {
-            var result = await Mediator.Send(new GetSkillsByCandidateIdRequest { Id = id });
+            var result = await Mediator.Send(new GetSkillsByCandidateIdRequest { UserId = Guid.Parse(userId) });
             return Ok(result);
         }
     }

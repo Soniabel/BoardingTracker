@@ -20,6 +20,6 @@ export class CandidateItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.candidate = this.data.candidate;
-    this.skills$ = this.candidateService.getCandidateSkills(this.candidate.id);
+    //this.skills$ = this.candidateService.getCandidateSkills(this.candidate.userId);
   }
 }

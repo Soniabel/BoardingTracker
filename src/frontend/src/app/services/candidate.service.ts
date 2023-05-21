@@ -20,8 +20,8 @@ export class CandidateService {
     }));
   }
 
-  public getCandidateSkills(id: number): Observable<Skill[]> {
-    return  this.httpClient.get<ResponseModel<Skill[]>>(`${environment.baseUrl}/candidates/skills/${id}`)
+  public getCandidateSkills(userId: string): Observable<Skill[]> {
+    return  this.httpClient.get<ResponseModel<Skill[]>>(`${environment.baseUrl}/candidates/skills/${userId}`)
       .pipe(map((data) => {
         return data.items
       }));

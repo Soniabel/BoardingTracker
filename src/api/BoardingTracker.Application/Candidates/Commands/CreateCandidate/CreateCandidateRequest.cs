@@ -15,7 +15,7 @@ namespace BoardingTracker.Application.Candidates.Commands.CreateCandidate
 
         public string ResumeUrl { get; set; }
 
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
     }
 
 }

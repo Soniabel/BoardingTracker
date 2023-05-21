@@ -36,11 +36,11 @@ namespace BoardingTracker.Application.Candidates.Queries.GetCandidateById
                         UserId = user.Id,
                         Email = user.Email
                     })
-                   .FirstOrDefaultAsync(x => x.Id == request.Id);
+                   .FirstOrDefaultAsync(x => x.UserId == request.UserId);
 
             if (candidate is null)
             {
-                throw new NotFoundException(nameof(Candidate), request.Id);
+                throw new NotFoundException(nameof(Candidate), request.UserId);
             }
 
             return _mapper.Map<CandidateModel>(candidate);

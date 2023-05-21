@@ -7,7 +7,7 @@ namespace BoardingTracker.Application.Candidates.Validators
     {
         public GetSkillsByCandidateIdValidator()
         {
-            RuleFor(candidate => candidate.Id).NotNull().NotEmpty();
+            RuleFor(candidate => candidate.UserId).NotNull().NotEmpty();
         }
     }
 }

@@ -21,6 +21,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { InterviewEffects } from './store/effects/interview.effect';
 import { environment } from 'src/environments/environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ProfileSettingsModule } from './profile-settings/profile-settings.module';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     RecruitersModule,
     InterviewsModule,
     CandidatesModule,
+    ProfileSettingsModule,
     SharedModule,
     StoreModule.forRoot({interviews: reducerInterview}),
     EffectsModule.forRoot([InterviewEffects]),

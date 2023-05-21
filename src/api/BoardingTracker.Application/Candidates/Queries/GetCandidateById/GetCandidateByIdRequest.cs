@@ -5,6 +5,6 @@ namespace BoardingTracker.Application.Candidates.Queries.GetCandidateById
 {
     public class GetCandidateByIdRequest : IRequest<CandidateModel>
     {
-        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
     }
 }
